@@ -2,6 +2,7 @@
 %   An IsingModel class that contains a system
 %   of spin lattices and provides support for
 %   controlling and running simulations.
+%
 classdef IsingModel < handle
     
     properties (SetAccess = private)
@@ -18,9 +19,14 @@ classdef IsingModel < handle
     end
     
     methods
+        
         % Constructor
-        function [im] = IsingModel(L, H, T, steps)
-            im.system = TriangularSpinLattice(L, H, T, steps);
+        function [im] = IsingModel(L, H, T, steps, g)
+            if g == 't'
+                im.system = TriangularSpinLattice(L, H, T, steps);
+            elseif g == 's'
+                im.system = SquareSpinLattice(L, H, T, steps);
+            end
             im.steps = steps;
             im.displaymod = steps/100;
         end
