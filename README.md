@@ -4,15 +4,7 @@ An object oriented MATLAB library for simulating the Ising Model and determining
 
 ## Download and Setup
 
-Obtain the library by
-
-* Downloading the [zip](https://github.com/tylerparsons/IsingModelSimulation/archive/master.zip)
-
-OR 
-
-* By cloning the GIT repository at git://github.com/tylerparsons/IsingModelSimulation.git
-
-In either case, it is necessary to put the library in a folder on the MATLAB path.
+Clone the library into a folder on the MATLAB path.
 
 ## Running the Simulation
 
